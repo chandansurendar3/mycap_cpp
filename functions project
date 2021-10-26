@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int fun(int n);
+int fun(int n)
+{
+    int a,b,i,j,l;
+    int k=0;
+    int m=0;
+    for(i=1; i<=n/2;i++)
+    {
+        a=i;
+        b=n-i;
+    for(j=1;j<=a;j++)
+    {
+        if(a%j==0)
+        k++;
+    }
+    for(l=1;l<=b;l++)
+    {
+        if(b%l==0)
+        m++;
+    }
+    if(k<=2 && m<=2)
+    cout<<a<<"\t"<<b<<endl;
+    k=0;m=0;
+  }
+    return 0;
+
+}
+
+int main()
+{
+    int x;
+    cout<<"enter the no.\n";
+    cin>>x;
+    fun(x);
+    return 0;
+}
